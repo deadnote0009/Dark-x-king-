@@ -7,7 +7,7 @@ import platform
 from pyrogram import Client, filters
 
 def humanbytes(size):
-    """Convert Bytes To Bytes So That Human Can Read It"""
+    """𝙲𝙾𝙽𝚅𝙴𝚁𝚃 𝙱𝚈𝚃𝙴𝚂 𝚃𝙾 𝙱𝚈𝚃𝙴𝚂 𝚂𝙾 𝚃𝙷𝙰𝚃 𝙷𝚄𝙼𝙰𝙽 𝙲𝙰𝙽 𝚁𝙴𝙰𝙳 𝙸𝚃."""
     if not size:
         return ""
     power = 2 ** 10
