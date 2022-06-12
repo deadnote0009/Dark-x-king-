@@ -19,8 +19,8 @@ def humanbytes(size):
         raised_to_pow += 1
     return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
 
-#Module by SumitYadav
-# FETCH SYSINFO
+# ============================𝙼𝙾𝙳𝚄𝙻𝙴𝚂 𝙱𝚈 𝚂𝚄𝙼𝙸𝚃 𝚈𝙰𝙳𝙰𝚅=======================
+# =============================𝙵𝙴𝚃𝙲𝙷 𝚂𝚈𝚂𝙸𝙽𝙵𝙾===============================
 
 @Client.on_message(command(["sysinfo"]) & ~filters.edited)
 async def give_sysinfo(client, message):
@@ -42,7 +42,7 @@ async def give_sysinfo(client, message):
     psutil.disk_io_counters()
     disk = f"{humanbytes(du.used)} / {humanbytes(du.total)} " f"({du.percent}%)"
     cpu_len = len(psutil.Process().cpu_affinity())
-    wtf = f""" **•• sʏsᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ••**
+    darkxmusic = f""" **•• sʏsᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ••**
 ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┣★ **ᴘʟᴀᴛꜰᴏʀᴍ :** `{splatform}`
 ┣★ **ᴘʟᴀᴛꜰᴏʀᴍ ʀᴇʟᴇᴀsᴇ :** `{platform_release}`
@@ -58,4 +58,4 @@ async def give_sysinfo(client, message):
 ┣★ **ᴅɪsᴋ :** `{disk}`
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
     """
-    await message.reply(wtf)
+    await message.reply(darkxmusic)
