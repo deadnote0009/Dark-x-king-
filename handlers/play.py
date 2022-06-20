@@ -11,7 +11,7 @@ import aiohttp
 from youtube_search import YoutubeSearch
 import converter
 from downloaders import youtube
-from config import DURATION_LIMIT
+from config import DURATION_LIMIT, SUPPORT_GROUP
 from helpers.filters import command
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
@@ -146,7 +146,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+        thumb_name = "https://te.legra.ph/file/0eca22cc7f98ed470b010.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -223,7 +223,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+            thumb_name = "https://te.legra.ph/file/0eca22cc7f98ed470b010.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard =  InlineKeyboardMarkup(
@@ -260,7 +260,7 @@ async def play(_, message: Message):
             return await lel.edit(
                 "» ɢɪᴠᴇ ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ..."
             )
-        await lel.edit("**ᴘʀᴏᴄᴇssɪɴɢ...**")
+        await lel.edit("🎃")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
