@@ -1,4 +1,4 @@
- import os
+import os
 from os import path
 from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
@@ -71,7 +71,14 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-     
+    draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
+    draw.text(
+(190, 590), f"Duration: {duration}", (255, 255, 255), font=font
+    )
+    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((190, 670),
+ f"Added By: {requested_by}",
+ (255, 255, 255),
  font=font,
     )
     img.save("final.png")
@@ -79,8 +86,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
+
 @Client.on_message(
-    command(["play", "yt", "ytplay"])
+    command(["play"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -90,11 +98,7 @@ async def play(_, message: Message):
     global que
     global useer
 
-    await message.delete()
-
-    darkxmusic = await message.reply("ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%")
-
-    sumit = message.from_user.mention
+    lel = await message.reply("🔎 **𝐅𝐢𝐧𝐝𝐢𝐧𝐠 💫 𝐓𝐡𝐞 𝐒𝐨𝐧𝐠 ❤️ ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★..**")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -102,7 +106,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "SumitYadav"
+        user.first_name = "@StrayCoder"
     usar = user
     wew = usar.id
     try:
@@ -113,25 +117,25 @@ async def play(_, message: Message):
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
-                    await darkxmusic.edit(
-                        "<b>» ᴀᴛ ғɪʀsᴛ ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ᴏғ ʏᴏᴜʀ ɢʀᴏᴜᴘ</b>")
+                    await lel.edit(
+                        "<b>𝐀𝐝 𝐌𝐞 😎 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧 𝐎𝐟 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 💫  𝐅𝐢𝐫𝐬𝐭 ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "» ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssꜰᴜʟʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ, ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs​.")
+                        message.chat.id, "** ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★ 🎶 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐉𝐨𝐢𝐧𝐞𝐝 😎 🤟 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩  𝐅𝐨𝐫 𝐏𝐥𝐚𝐲 ▶ 𝐌𝐮𝐬𝐢𝐜 🎸**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
-                    await darkxmusic.edit(
-                        f"<b>» ᴀssɪsᴛᴀɴᴛ ɪs ɴᴏᴛ ɪɴ ᴛʜɪs ᴄʜᴀᴛ, sᴇɴᴅ /join ғɪʀsᴛ ᴛɪᴍᴇ ᴛᴏ ᴏʀᴅᴇʀ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ᴊ​ᴏɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.")
+                    await lel.edit(
+                        f"<b>❰𝐅𝐥𝐨𝐨𝐝 😒 𝐖𝐚𝐢𝐭 𝐄𝐫𝐫𝐨𝐫  😔❱</b>\n𝐇𝐞𝐲 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 ❤️ 𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐉𝐨𝐢𝐧 𝐘𝐨𝐮𝐫 💫 𝐆𝐫𝐨𝐮𝐩  𝐃𝐮𝐞 𝐓𝐨 𝐇𝐞𝐚𝐯𝐲 𝐉𝐨𝐢𝐧 𝐑𝐞𝐐𝐮𝐞𝐬𝐭 🥀 . 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 💫 𝐈𝐬 𝐍𝐨𝐭 𝐁𝐚𝐧𝐧𝐞𝐝 😔 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 🎸  𝐀𝐧𝐝 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐋𝐚𝐭𝐞𝐫 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/TERA_BAAP_KATIL) ❤️🥀 :)")
     try:
         await USER.get_chat(chid)
-    except Exception as e:
-        await darkxmusic.edit(
-            f"<i>» ᴀssɪsᴛᴀɴᴛ ғᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀᴛ.</i>\n\nʀᴇᴀsᴏɴ : {e}")
+    except:
+        await lel.edit(
+            f"<i>Hey {user.first_name}, 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐈𝐬 𝐍𝐨𝐭 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭' 𝐀𝐬𝐤 𝐀𝐝𝐦𝐢𝐧 😎 𝐓𝐨 𝐒𝐞𝐧𝐝 /Play 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 😎 𝐅𝐨𝐫 𝐅𝐢𝐫𝐬𝐭 𝐓𝐢𝐦𝐞 𝐓𝐨 𝐀𝐝𝐝 𝐈𝐭 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/Tera_baap_katil) ❤️🥀 </i>")
         return
     
     audio = (
@@ -144,14 +148,34 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ vɪᴅᴇᴏ ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
+                f"❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀❌"
             )
 
         file_name = get_file_name(audio)
         title = file_name
+        thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+        thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
 
+        keyboard = InlineKeyboardMarkup(
+            [
+                
+               [
+                    InlineKeyboardButton(
+                            text="📨𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/heartbrokenperson1"),
+                            
+                    InlineKeyboardButton(
+                            text="📨𝐆𝐫𝐨𝐮𝐩⭐",
+                            url=f"https://t.me/FULL_MASTI_CLUBS")
+               ],
+               
+            ]
+        )
+
+        requested_by = message.from_user.first_name
+        await generate_cover(requested_by, title, views, duration, thumbnail)
         file_path = await converter.convert(
             (await message.reply_to_message.download(file_name))
             if not path.isfile(path.join("downloads", file_name))
@@ -178,23 +202,57 @@ async def play(_, message: Message):
                 dur += int(dur_arr[i]) * secmul
                 secmul *= 60
 
+            keyboard = InlineKeyboardMarkup(
+            [
+                
+               [
+                    InlineKeyboardButton(
+                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            
+                    InlineKeyboardButton(
+                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
+                            url=f"https://t.me/FULL_MASTI_CLUBS")
+               ],
+               
+            ]
+        )
+
         except Exception as e:
             title = "NaN"
+            thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
             duration = "NaN"
             views = "NaN"
+            keyboard = InlineKeyboardMarkup(
+            [
+                
+               [
+                    InlineKeyboardButton(
+                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            
+                    InlineKeyboardButton(
+                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
+                            url=f"https://t.me/FULL_MASTI_CLUBS")
+               ],
+               
+            ]
+        )
 
         if (dur / 60) > DURATION_LIMIT:
-            await darkxmusic.edit(
-                f"❌ vɪᴅᴇᴏ ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
+            await lel.edit(
+                f"❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀❌"
             )
             return
+        requested_by = message.from_user.first_name
+        await generate_cover(requested_by, title, views, duration, thumbnail)
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await darkxmusic.edit(
-                "» ɢɪᴠᴇ ᴍᴇ ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ"
+            return await lel.edit(
+                "✌𝐖𝐡𝐚𝐭'𝐒 𝐓𝐡𝐞 ❤️ 𝐒𝐨𝐧𝐠 🎸 𝐘𝐨𝐮 🎧 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️"
             )
-        await darkxmusic.edit("⚡")
+        await lel.edit("**Processing 🔄 Please Wait !!**")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -218,17 +276,35 @@ async def play(_, message: Message):
                 secmul *= 60
 
         except Exception as e:
-            await darkxmusic.edit(
-                "**» sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ, ᴛʀʏ ᴀɴᴏᴛʜᴇʀ sᴏɴɢ ᴏʀ ᴍᴀʏʙᴇ sᴘᴇʟʟ ɪᴛ ᴘʀᴏᴘᴇʀʟʏ.**"
+            await lel.edit(
+                "🌸° 𝐒𝐨𝐧𝐠 🎸 𝐍𝐨𝐭 😒 𝐅𝐨𝐮𝐧𝐝 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 ° 🥀."
             )
             print(str(e))
             return
 
+        keyboard = InlineKeyboardMarkup(
+            [
+                
+               [
+                    InlineKeyboardButton(
+                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            
+                    InlineKeyboardButton(
+                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
+                            url=f"https://t.me/FULL_MASTI_CLUBS")
+               ],
+               
+            ]
+        )
+
         if (dur / 60) > DURATION_LIMIT:
-            await darkxmusic.edit(
-                f"❌ vɪᴅᴇᴏ ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
+            await lel.edit(
+                f"❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀❌"
             )
             return
+        requested_by = message.from_user.first_name
+        await generate_cover(requested_by, title, views, duration, thumbnail)
         file_path = await converter.convert(youtube.download(url))
     ACTV_CALLS = []
     chat_id = message.chat.id
@@ -236,20 +312,11 @@ async def play(_, message: Message):
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
-        await message.reply_text(
-            text=f"**» ᴛʀᴀᴄᴋ ǫᴜᴇᴜᴇᴅ ᴀᴛ {position} **\n📌 **ᴛɪᴛʟᴇ​ :**[{title[:65]}]({url})\n\n🕕** ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` **ᴍɪɴᴜᴛᴇs**\n💕** ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ : **{chumtiya}",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/{SUPPORT_GROUP}"),
-                    InlineKeyboardButton("• ᴜᴘᴅᴀᴛᴇs •", url=f"https://t.me/TechQuard")
-                ],
-                [InlineKeyboardButton("» ᴄʟᴏsᴇ «", callback_data="close_play")
-                ],
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
+        await message.reply_photo(
+            photo="final.png",
+            caption="****❰ ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★ ❱ 𝐒𝐨𝐧𝐠 ❤️ 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 💫🤟** {}**\n𝗕𝘆 : @TMC_EMPIRES".format(position),
+            reply_markup=keyboard,
+        )
     else:
         await callsmusic.pytgcalls.join_group_call(
                 chat_id, 
@@ -261,23 +328,13 @@ async def play(_, message: Message):
                 stream_type=StreamType().local_stream,
             )
 
-        await message.reply_text(
-            text=f"**\n📌 **ᴛɪᴛʟᴇ​:** [{title[:65]}]({url})\n🕕 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}` ᴍɪɴᴜᴛᴇs\n💕 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​:** {chumtiya}\n💔 **ᴘʟᴀʏɪɴɢ ɪɴ​:** `{message.chat.title}`\n🎥 **sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** ʏᴏᴜᴛᴜʙᴇ ᴍᴜsɪᴄ\n",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/{SUPPORT_GROUP}"),
-                    InlineKeyboardButton("• ᴜᴘᴅᴀᴛᴇs •", url=f"https://t.me/TechQuard")
-                ],
-                [InlineKeyboardButton("» ᴄʟᴏsᴇ «", callback_data="close_play")
-                ],
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
+        await message.reply_photo(
+            photo="final.png",
+            reply_markup=keyboard,
+            caption="**❰ ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★ ❱ Now 😄 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 📀 𝐀𝐭 🤟 `{}`...**\n𝗕𝘆 : @TMC_EMPIRES".format(
+        message.chat.title
+        ), )
 
-    return await darkxmusic.delete()
-
-@Client.on_callback_query(filters.regex("close_play"))
-async def in_close_play(_, query: CallbackQuery):
-    await query.message.delete()
+    os.remove("final.png")
+    return await lel.delete()
+    
