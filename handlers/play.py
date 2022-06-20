@@ -351,6 +351,6 @@ async def play(_, message: Message):
     os.remove("final.png")
     return await lel.delete()
     
-    @Client.on_callback_query(filters.regex("close_play"))
-     async def in_close_play(_, query: CallbackQuery):
-     await query.message.delete()
+  @Client.on_callback_query(filters.regex("close_play"))
+   async def in_close_play(_, query: CallbackQuery):
+      await query.message.delete()
