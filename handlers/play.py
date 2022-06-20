@@ -91,6 +91,8 @@ async def play(_, message: Message):
 
     lel = await message.reply("🔎 **sᴇᴀʀᴄʜɪɴɢ..**")
 
+    chumtiya = message.from_user.mention
+
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -350,5 +352,5 @@ async def play(_, message: Message):
     return await lel.delete()
     
     @Client.on_callback_query(filters.regex("close_play"))
-async def in_close_play(_, query: CallbackQuery):
-    await query.message.delete()
+     async def in_close_play(_, query: CallbackQuery):
+     await query.message.delete()
