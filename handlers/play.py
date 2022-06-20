@@ -159,12 +159,12 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="sᴜᴘᴘᴏʀᴛ",
-                            url=f"https://t.me/")
+                            url=f"https://t.me/{SUPPORT_GROUP}")
                ],
                [ 
                      InlineKeyboardButton(
                             text="ᴄʟᴏsᴇ",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            callback_data="close_play")
                ],
                
             ]
@@ -198,17 +198,22 @@ async def play(_, message: Message):
                 dur += int(dur_arr[i]) * secmul
                 secmul *= 60
 
-            keyboard = InlineKeyboardMarkup(
+            keyboard =  InlineKeyboardMarkup(
             [
                 
                [
                     InlineKeyboardButton(
-                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            text="ᴜᴘᴅᴀᴛᴇs",
+                            url=f"https://t.me/TechQuard"),
                             
                     InlineKeyboardButton(
-                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="sᴜᴘᴘᴏʀᴛ",
+                            url=f"https://t.me/{SUPPORT_GROUP}")
+               ],
+               [ 
+                     InlineKeyboardButton(
+                            text="ᴄʟᴏsᴇ",
+                            callback_data="close_play")
                ],
                
             ]
@@ -219,17 +224,22 @@ async def play(_, message: Message):
             thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
             duration = "NaN"
             views = "NaN"
-            keyboard = InlineKeyboardMarkup(
+            keyboard =  InlineKeyboardMarkup(
             [
                 
                [
                     InlineKeyboardButton(
-                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            text="ᴜᴘᴅᴀᴛᴇs",
+                            url=f"https://t.me/TechQuard"),
                             
                     InlineKeyboardButton(
-                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="sᴜᴘᴘᴏʀᴛ",
+                            url=f"https://t.me/{SUPPORT_GROUP}")
+               ],
+               [ 
+                     InlineKeyboardButton(
+                            text="ᴄʟᴏsᴇ",
+                            callback_data="close_play")
                ],
                
             ]
@@ -278,17 +288,22 @@ async def play(_, message: Message):
             print(str(e))
             return
 
-        keyboard = InlineKeyboardMarkup(
+        keyboard =  InlineKeyboardMarkup(
             [
                 
                [
                     InlineKeyboardButton(
-                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            text="ᴜᴘᴅᴀᴛᴇs",
+                            url=f"https://t.me/TechQuard"),
                             
                     InlineKeyboardButton(
-                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="sᴜᴘᴘᴏʀᴛ",
+                            url=f"https://t.me/{SUPPORT_GROUP}")
+               ],
+               [ 
+                     InlineKeyboardButton(
+                            text="ᴄʟᴏsᴇ",
+                            callback_data="close_play")
                ],
                
             ]
