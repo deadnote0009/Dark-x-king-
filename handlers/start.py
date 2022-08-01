@@ -59,11 +59,11 @@ async def start_(client: Client, message: Message):
                         "🗽 ᴅᴇᴠᴇʟᴏᴘᴇʀ ", url=f"https://t.me/Mr_Disaster_Xd"
                     ),
                     InlineKeyboardButton(
-                        "🥂 ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.meTechQuard"
+                        "🥂 ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.me/TechQuard"
                     )
                 ],[
                      InlineKeyboardButton(
-                        "📄 ʜᴇʟᴘ & ᴄᴏᴍᴍɴᴀᴅs ", callback_data="Help")
+                        "📄 ʜᴇʟᴘ & ᴄᴏᴍᴍɴᴀᴅs ", callback_data="help")
                 ],[
                     
                     InlineKeyboardButton(
@@ -112,7 +112,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         "🗽 ᴅᴇᴠᴇʟᴏᴘᴇʀ ", url=f"https://t.me/Mr_Disaster_Xd"
                     ),
                     InlineKeyboardButton(
-                        "🥂 ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.meTechQuard"
+                        "🥂 ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.me/TechQuard"
                     )
                 ],[
                      InlineKeyboardButton(
