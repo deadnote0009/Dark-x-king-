@@ -33,15 +33,15 @@ async def help_cmd(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/{SUPPORT_GROUP}"
+                        " sᴜᴩᴩᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "• ʏᴏᴜᴛᴜʙᴇ •", url="https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"
+                        " ʏᴏᴜᴛᴜʙᴇ ", url="https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "• ᴄʟᴏsᴇ •", callback_data="close_play"
+                        " ᴄʟᴏsᴇ ", callback_data="close_play"
                     )
                 ]
             ]
