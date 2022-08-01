@@ -49,7 +49,6 @@ async def help(client: Client, message: Message):
     start = datetime.now()
     end = datetime.now()
     resp = (end - start).microseconds / 1000
-    await message.reply_sticker("CAACAgUAAxkBAAEENxZiNtPdibVkMsjLZrUG9NK4hotHQgAC2wEAAoM12VSdN9ujxVtnUyME")
     sumit = await message.reply_photo(
         photo=f"{PING_IMG}",
         caption="ᴘɪɴɢɪɴɢ....",
@@ -60,10 +59,10 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "• sᴜᴘᴘᴏʀᴛ •", url=f"https://t.me/{SUPPORT_GROUP}"
+                        " sᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "• ʏᴏᴜᴛᴜʙᴇ •", url="https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"
+                        " ʏᴏᴜᴛᴜʙᴇ ", url="https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"
                     )
                 ]
             ]
