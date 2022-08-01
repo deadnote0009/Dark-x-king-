@@ -81,7 +81,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("👤 ᴜꜱᴇʀꜱ", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("🥂 sᴜᴘᴘᴏʀᴛ", url=f"https://t.meTechQuardSupport"),
+                InlineKeyboardButton("🥂 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TechQuardSupport"),
                 InlineKeyboardButton("♨️ ʏᴏᴜᴛᴜʙᴇ", url="https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"),
             ],
             [
@@ -128,7 +128,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         try:
             await query.edit_message_text(
-                HOME_TEXT.format(query.from_user.first_name, query.from_user.id),
+                HELP_TEXT.format(query.from_user.first_name, query.from_user.id),
                 reply_markup=reply_markup
             )
         except MessageNotModified:
