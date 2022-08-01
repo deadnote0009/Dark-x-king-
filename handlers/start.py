@@ -137,7 +137,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="sudo":
         buttons = [
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="home"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help"),
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
