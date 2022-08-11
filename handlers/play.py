@@ -257,8 +257,18 @@ async def play(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit(
-                "» ɢɪᴠᴇ ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ..."
+            await m.reply_photo(
+                     photo=f"",
+                    caption="💌**ᴜsᴀɢᴇ: /play ɢɪᴠᴇ ᴀ ᴛɪᴛʟᴇ sᴏɴɢ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ**"
+                    ,
+                      reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("👥 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TechQuardSupport"),
+                            InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
+                        ]
+                    ]
+                )
             )
         await lel.edit("💓")
         query = message.text.split(None, 1)[1]
