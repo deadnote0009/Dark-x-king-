@@ -270,7 +270,7 @@ async def play(_, message: Message):
                     ]
                 )
             )
-        await lel.edit("💓")
+        await lel.edit("👻")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
