@@ -259,7 +259,7 @@ async def play(_, message: Message):
         if len(message.command) < 2:
             await message.reply_photo(
                      photo=f"https://te.legra.ph/file/b07e1debac241e6d9b30e.jpg",
-                    caption="💌**ᴜsᴀɢᴇ: /play ɢɪᴠᴇ ᴀ ᴛɪᴛʟᴇ sᴏɴɢ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ**"
+                    caption="💌 **ᴜsᴀɢᴇ: /play ɢɪᴠᴇ ᴀ ᴛɪᴛʟᴇ sᴏɴɢ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ**"
                     ,
                       reply_markup=InlineKeyboardMarkup(
                     [
