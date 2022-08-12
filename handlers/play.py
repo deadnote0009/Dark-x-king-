@@ -89,7 +89,7 @@ async def play(_, message: Message):
     global que
     global useer
 
-    lel = await message.reply("🔎 **sᴇᴀʀᴄʜɪɴɢ..**")
+    lel = await message.reply("🔎 **sᴇᴀʀᴄʜɪɴɢ...**")
 
     chumtiya = message.from_user.mention
 
