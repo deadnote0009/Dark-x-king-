@@ -153,6 +153,12 @@ async def play(_, message: Message):
 
         keyboard = InlineKeyboardMarkup(
             [
+               [
+                      InlineKeyboardButton("▢", callback_data="cbstop"),
+                      InlineKeyboardButton("II", callback_data="cbpause"),
+                      InlineKeyboardButton("‣‣I", "skip"),
+                      InlineKeyboardButton("▷", callback_data="cbresume"),
+               ],
                 
                [
                     InlineKeyboardButton(
@@ -202,6 +208,12 @@ async def play(_, message: Message):
 
             keyboard =  InlineKeyboardMarkup(
             [
+               [
+                      InlineKeyboardButton("▢", callback_data="cbstop"),
+                      InlineKeyboardButton("II", callback_data="cbpause"),
+                      InlineKeyboardButton("‣‣I", "skip"),
+                      InlineKeyboardButton("▷", callback_data="cbresume"),
+               ],
                 
                [
                     InlineKeyboardButton(
