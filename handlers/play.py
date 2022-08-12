@@ -228,6 +228,12 @@ async def play(_, message: Message):
             views = "NaN"
             keyboard =  InlineKeyboardMarkup(
             [
+               [
+                      InlineKeyboardButton("▢", callback_data="cbstop"),
+                      InlineKeyboardButton("II", callback_data="cbpause"),
+                      InlineKeyboardButton("‣‣I", "skip"),
+                      InlineKeyboardButton("▷", callback_data="cbresume"),
+               ],
                 
                [
                     InlineKeyboardButton(
@@ -270,6 +276,7 @@ async def play(_, message: Message):
                     ]
                 )
             )
+    else:
         await lel.edit("👻")
         query = message.text.split(None, 1)[1]
         # print(query)
@@ -302,6 +309,12 @@ async def play(_, message: Message):
 
         keyboard =  InlineKeyboardMarkup(
             [
+               [
+                      InlineKeyboardButton("▢", callback_data="cbstop"),
+                      InlineKeyboardButton("II", callback_data="cbpause"),
+                      InlineKeyboardButton("‣‣I", "skip"),
+                      InlineKeyboardButton("▷", callback_data="cbresume"),
+               ],
                 
                [
                     InlineKeyboardButton(
@@ -362,3 +375,98 @@ async def play(_, message: Message):
 @Client.on_callback_query(filters.regex("close_play"))
 async def in_close_play(_, query: CallbackQuery):
     await query.message.delete()
+
+@Client.on_callback_query(filters.regex("cbpause"))
+async def cbpause(_, query: CallbackQuery):
+    if query.message.sender_chat:
+        return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("» ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    chat_id = query.message.chat.id
+    if chat_id in QUEUE:
+        try:
+            await call_py.pause_stream(chat_id)
+            await query.edit_message_text(
+                "⏸ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴘᴀᴜsᴇᴅ", reply_markup=bttn
+            )
+        except Exception as e:
+            await query.edit_message_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`", reply_markup=bcl)
+    else:
+        await query.answer("❌ ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ", show_alert=True)
+
+
+@Client.on_callback_query(filters.regex("cbresume"))
+async def cbresume(_, query: CallbackQuery):
+    if query.message.sender_chat:
+        return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("» ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    chat_id = query.message.chat.id
+    if chat_id in QUEUE:
+        try:
+            await call_py.resume_stream(chat_id)
+            await query.edit_message_text(
+                "▶️ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ʀᴇsᴜᴍᴇᴅ", reply_markup=bttn
+            )
+        except Exception as e:
+            await query.edit_message_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`", reply_markup=bcl)
+    else:
+        await query.answer("❌ ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ", show_alert=True)
+
+@Client.on_callback_query(filters.regex("cbstop"))
+async def cbstop(_, query: CallbackQuery):
+    if query.message.sender_chat:
+        return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("» ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    chat_id = query.message.chat.id
+    if chat_id in QUEUE:
+        try:
+            await call_py.leave_group_call(chat_id)
+            clear_queue(chat_id)
+            await query.edit_message_text("✅ **ᴛʜɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴇɴᴅᴇᴅ**", reply_markup=bcl)
+        except Exception as e:
+            await query.edit_message_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`", reply_markup=bcl)
+    else:
+        await query.answer("❌ ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ", show_alert=True)
+
+@Client.on_callback_query(filters.regex("cbmute"))
+async def cbmute(_, query: CallbackQuery):
+    if query.message.sender_chat:
+        return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("» ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    chat_id = query.message.chat.id
+    if chat_id in QUEUE:
+        try:
+            await call_py.mute_stream(chat_id)
+            await query.edit_message_text(
+                "🔇 ᴜsᴇʀʙᴏᴛ sᴜᴄᴄᴇsғᴜʟʟʏ ᴍᴜᴛᴇᴅ", reply_markup=bttn
+            )
+        except Exception as e:
+            await query.edit_message_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`", reply_markup=bcl)
+    else:
+        await query.answer("❌ ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ", show_alert=True)
+
+@Client.on_callback_query(filters.regex("cbunmute"))
+async def cbunmute(_, query: CallbackQuery):
+    if query.message.sender_chat:
+        return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("» ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    chat_id = query.message.chat.id
+    if chat_id in QUEUE:
+        try:
+            await call_py.unmute_stream(chat_id)
+            await query.edit_message_text(
+                "🔊 ᴜsᴇʀʙᴏᴛ sᴜᴄᴄᴇsғᴜʟʟʏ ᴜɴᴍᴜᴛᴇᴅ", reply_markup=bttn
+            )
+        except Exception as e:
+            await query.edit_message_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`", reply_markup=bcl)
+    else:
+        await query.answer("❌ ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ", show_alert=True)
