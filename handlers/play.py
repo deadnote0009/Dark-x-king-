@@ -13,7 +13,6 @@ import converter
 from downloaders import youtube
 from config import DURATION_LIMIT, SUPPORT_GROUP
 from helpers.filters import command
-from helpers.queues import QUEUE, add_to_queue
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
@@ -71,7 +70,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-     
+    
     img.save("final.png")
     os.remove("temp.png")
     os.remove("background.png")
