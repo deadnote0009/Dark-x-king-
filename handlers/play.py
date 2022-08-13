@@ -13,6 +13,7 @@ import converter
 from downloaders import youtube
 from config import DURATION_LIMIT, SUPPORT_GROUP
 from helpers.filters import command
+from helpers.queues import QUEUE, add_to_queue
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
