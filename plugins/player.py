@@ -90,7 +90,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
     image = Image.open(f"./background.png")
     black = Image.open("resource/black.jpg")
-    img = Image.open("resource/ayame.png")
+    img = Image.open("resource/darkxmusic.png")
     image5 = changeImageSize(1280, 720, img)
     image1 = changeImageSize(1280, 720, image)
     image1 = image1.filter(ImageFilter.BoxBlur(10))
@@ -128,7 +128,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     # description
     views = f"Views : {views}"
     duration = f"Duration : {duration} minutes"
-    channel = f"player : Ayame Music"
+    channel = f"player : DarkxMusic"
 
 
     
