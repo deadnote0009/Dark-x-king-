@@ -57,7 +57,7 @@ async def others(_, query: CallbackQuery):
                         "🍀 ᴏᴛʜᴇʀ ɪɴғᴏ", callback_data="repoinfo")
                 ],
                 [
-                    InlineKeyboardButton("◁", callback_data="home")
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
                 ]
            ]
         ),
@@ -97,7 +97,7 @@ async def repoinfo(_, query: CallbackQuery):
                         "🤤 ᴘᴏʀɴ ʜᴜʙ", url="http://t.me/TheNudesHubBot")
                 ],
                 [
-                    InlineKeyboardButton("◁", callback_data="moreinfo")
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="moreinfo")
                 ]
            ]
         ),
