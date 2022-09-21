@@ -1,22 +1,23 @@
-### ᴅᴀʀᴋxᴍᴜsɪᴄ
+ # ᴀʏᴀᴍᴇ ᴍᴜsɪᴄ ʙᴏᴛ
 
-### ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜsɪᴄ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ sᴜᴍɪᴛ ʏᴀᴅᴀᴠ.
+### ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴜsɪᴄ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ sᴜᴍɪᴛ ʏᴀᴅᴀᴠ.
 
-<p align="center"><a href="https://t.me/TechQuardSupport"><img src="https://te.legra.ph/file/b6ee1c66d8717f75dedfa.jpg"></a></p>
+<p align="center"><a href="https://t.me/World_FriendShip_Zone"><img src="https://te.legra.ph/file/086426b04c04a3c16f558.jpg"></a></p>
 
 
-### ᴅᴇᴘʟᴏʏ ᴛᴏ ʜᴇʀᴏᴋᴜ
+ <h3 align="center">
+    ─ ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ ─
+</h3>
 
-[![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sumit9969/DarkxMusic)
-
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/DemonCreators/AyameMusic"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 ### sᴛʀɪɴɢ sᴇssɪᴏɴ
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://t.me/Hana_Session_Bot)
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-black)](https://t.me/Hana_Session_Bot)
 
-### ɪғ ʏᴏᴜ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴏᴡɴᴇʀ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://telegram.dog/Mr_Disaster_Xd)
 
 ### ꜱᴜᴘᴘᴏʀᴛ ᴀɴᴅ ᴜᴘᴅᴀᴛᴇꜱ
-<a href="https://t.me/TechQuardSupport"><img src="https://img.shields.io/badge/ᴊᴏɪɴ-sᴜᴘᴘᴏʀᴛ%20sᴜᴘᴘᴏʀᴛ-black.svg?style=for-the-badge&logo=Telegram">
-<a href="https://t.me/TechQuard"><img src="https://img.shields.io/badge/ᴊᴏɪɴ-ᴄʜᴀɴɴᴇʟ%20ᴜᴘᴅᴀᴛᴇ-black.svg?style=for-the-badge&logo=Telegram">
+<a href="https://t.me/TechQuardSupport"><img src="https://img.shields.io/badge/Join-Group%20Support-black.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/TechQuard"><img src="https://img.shields.io/badge/Join-Updates%20Channel-black.svg?style=for-the-badge&logo=Telegram"></a>
+
+ 

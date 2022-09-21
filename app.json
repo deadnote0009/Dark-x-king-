@@ -1,0 +1,42 @@
+{
+    "name": "ᴀʏᴀᴍᴇ ᴍᴜsɪᴄ",
+    "logo": "https://te.legra.ph/file/086426b04c04a3c16f558.jpg",
+    "description": "ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴜsɪᴄ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ sᴜᴍɪᴛ ʏᴀᴅᴀᴠ.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/DemonCreators/AyameMusic",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "𝚈𝚘𝚞𝚛 𝙰𝚙𝚙 𝙸𝙳",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "𝚈𝚘𝚞𝚛 𝙰𝚙𝚙 𝙷𝚊𝚜𝚑",
+            "required": true
+       },
+        "BOT_USERNAME": {
+            "description": "𝙵𝚒𝚕𝚕 𝚠𝚒𝚝𝚑 𝚢𝚘𝚞𝚛 𝚋𝚘𝚝 𝚞𝚜𝚎𝚛𝚗𝚊𝚖𝚎 𝚏𝚛𝚘𝚖 @BotFather 𝚋𝚞𝚝 𝚠𝚒𝚝𝚑𝚘𝚞𝚝 𝚞𝚜𝚒𝚗𝚐 '@' 𝚜𝚢𝚖𝚋𝚘𝚕",
+            "required": true 
+        },
+        "BOT_TOKEN": {
+            "description": "𝙿𝚞𝚝 𝙱𝚘𝚝 𝚃𝚘𝚔𝚎𝚗 𝙾𝚏 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝",
+            "required": true
+        },
+         "SUDO_USERS": {
+            "description": "𝚂𝚞𝚍𝚘 𝚞𝚜𝚎𝚛𝚜",
+            "required": true
+        },
+        "STRING_SESSION": {
+            "description": "𝙿𝚢𝚛𝚘𝚐𝚛𝚊𝚖 𝚂𝚝𝚛𝚒𝚗𝚐 𝚂𝚎𝚜𝚜𝚒𝚘𝚗: 𝚄𝚜𝚎 𝚃𝚑𝚎𝚜𝚎 𝙱𝚘𝚝 @Zebra_Session_GeneratorBot",
+            "required": true
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
