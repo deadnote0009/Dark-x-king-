@@ -1,4 +1,5 @@
 import asyncio
+import random
 from time import time
 from datetime import datetime
 from modules.config import BOT_USERNAME
@@ -6,6 +7,28 @@ from modules.helpers.filters import command
 from modules.helpers.command import commandpro
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+
+
+
+
+DARK_IMG = (
+"https://te.legra.ph/file/fa6c391baeca4594e7ca5.jpg",
+"https://te.legra.ph/file/b3079e6041c32f91aa8cc.jpg",
+"https://te.legra.ph/file/87a36639d2dac42da7ec2.jpg",
+"https://te.legra.ph/file/640f00d7f0fea2640dcee.jpg",
+"https://te.legra.ph/file/af4e385ad2d039fc7fb55.jpg",
+"https://te.legra.ph/file/d48e10f96c47b9234447d.jpg",
+"https://te.legra.ph/file/91163718437d62b6a9b05.jpg",
+"https://te.legra.ph/file/617d689c8a1e4d7f03512.jpg",
+"https://te.legra.ph/file/dacd6bed230ebe1802eb2.jpg",
+"https://te.legra.ph/file/e1ea346c66e98ee8e773c.jpg",
+"https://te.legra.ph/file/4cce92e16ea6dc3b68989.jpg",
+"https://te.legra.ph/file/bf62629bfa33eed1fe39d.jpg",
+"https://te.legra.ph/file/1f36469d073c63fe6603c.jpg",
+"https://te.legra.ph/file/e1fe736cb651f507c8b38.jpg",
+)
+
+
 
 
 START_TIME = datetime.utcnow()
@@ -34,7 +57,7 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/6e45ac5a575c28e248572.jpg",
+        random.choice(DARK_IMG),
         caption=f"""**━━━━━━━━━━━━━━━━━
 ʜᴇʟʟᴏ, ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ᴀɴᴅ ɴᴇxᴛ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴠᴄ ᴘʟᴀʏᴇʀ
 ʙᴏᴛ ᴀɴᴅ ɴᴏ ʟᴀɢ ɪssᴜᴇ ᴡɪᴛʜ ʙᴇsᴛ sᴏᴜɴᴅ ǫᴜᴀʟɪᴛʏ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs
@@ -63,7 +86,7 @@ async def start_(client: Client, message: Message):
 @Client.on_message(commandpro(["/start", "/alive", "/repo"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/6e45ac5a575c28e248572.jpg",
+        random.choice(DARK_IMG),
         caption=f"""ʏᴏᴜ ᴋɴᴏᴡ ɪ ᴀᴍ ғᴀsᴛ ᴍᴜsɪᴄ ʙᴏᴛ ᴀɴᴅ ɴᴏ ʟᴀɢ ɪssᴜᴇ ᴡɪᴛʜ ʙᴇsᴛ sᴏᴜɴᴅ ǫᴜᴀʟɪᴛʏ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs. """,
         reply_markup=InlineKeyboardMarkup(
              [
