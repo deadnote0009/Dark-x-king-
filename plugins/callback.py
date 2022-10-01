@@ -27,7 +27,7 @@ SUDO_CMD = """
 
 
 
-USERS_CMD = """
+#USERS_CMD = """
 
 
 
