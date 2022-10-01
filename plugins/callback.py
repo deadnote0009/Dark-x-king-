@@ -50,8 +50,8 @@ async def home(_, query: CallbackQuery):
             InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
         ],
         [
-            InlineKeyboardButton("🧰 ᴄᴏᴍᴍᴀɴᴅs", url="https://telegra.ph/%F0%9D%99%B2%E1%B4%8F%E1%B4%8D%E1%B4%8D%E1%B4%80%C9%B4%E1%B4%85s-04-06"),
-            InlineKeyboardButton("🎃 ᴍᴏʀᴇ ɪɴғᴏ", callback_data="moreinfo")
+            InlineKeyboardButton("🧰 ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_cmd"),
+            InlineKeyboardButton("🎃 ᴍᴏʀᴇ ɪɴғᴏ", callback_data="more_info")
         ]
    
      ]
@@ -93,7 +93,7 @@ async def others(_, query: CallbackQuery):
 
 
 
-@Client.on_callback_query(filters.regex("moreinfo"))
+@Client.on_callback_query(filters.regex("more_info"))
 async def repoinfo(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 
