@@ -13,7 +13,7 @@ from modules.config import BOT_USERNAME, SESSION_NAME
 from modules.helpers.get_file_id import get_file_id
 from youtube_search import YoutubeSearch
 
-
+# ×=======================> ᴜsᴇʀʙᴏᴛ ᴊᴏɪɴ ᴄᴏᴍᴍᴀɴᴅ <==================================× #
 
 
 @Client.on_message(
@@ -45,6 +45,7 @@ async def join_chat(c: Client, m: Message):
 
 
 
+# ×=======================> ɪɴғᴏ <==================================× #
 
 @Client.on_message(command(["id", "stickerid", f"id@{BOT_USERNAME}"]))
 async def showid(_, message: Message):
@@ -75,6 +76,7 @@ async def showid(_, message: Message):
         await message.reply_text(_id)
 
 
+# ×=======================> sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ <==================================× #
 
 
 def time_to_seconds(time):
