@@ -123,7 +123,7 @@ async def repoinfo(_, query: CallbackQuery):
      )
     
 @Client.on_callback_query(filters.regex("sudo_users"))
-async def home(_, query: CallbackQuery):
+async def sudo(_, query: CallbackQuery):
     await query.edit_message_text(f"{SUDO_CMD}".format(query.message.chat.first_name, query.message.chat.id),
     reply_markup=InlineKeyboardMarkup(
             [              
@@ -137,7 +137,7 @@ async def home(_, query: CallbackQuery):
 
 
  @Client.on_callback_query(filters.regex("users_cmd"))
-async def home(_, query: CallbackQuery):
+async def users(_, query: CallbackQuery):
     await query.edit_message_text(f"{PIRO_LOG}".format(query.message.chat.first_name, query.message.chat.id),
     reply_markup=InlineKeyboardMarkup(
             [              
