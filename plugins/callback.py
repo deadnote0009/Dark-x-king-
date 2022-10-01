@@ -75,7 +75,7 @@ async def others(_, query: CallbackQuery):
                     InlineKeyboardButton(
                         "🌾 sᴜᴅᴏ ᴄᴍᴅ ", callback_data="sudo_users"),
                     InlineKeyboardButton(
-                        "🍃 ᴜsᴇʀs ᴄᴍᴅ", callback_data="user_cmd"),
+                        "🍃 ᴜsᴇʀs ᴄᴍᴅ", callback_data="users_cmd"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -128,7 +128,7 @@ async def home(_, query: CallbackQuery):
     reply_markup=InlineKeyboardMarkup(
             [              
                 [
-                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_cmd")
                 ]
            ]
         ),
@@ -142,7 +142,7 @@ async def home(_, query: CallbackQuery):
     reply_markup=InlineKeyboardMarkup(
             [              
                 [
-                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_cmd")
                 ]
            ]
         ),
