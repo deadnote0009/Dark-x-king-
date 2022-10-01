@@ -2,29 +2,39 @@ from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from modules.config import BOT_USERNAME
 
-HELP_TEXT = """
+HOME_TEXT = """
 ʜᴇʟʟᴏ [{}](tg://user?id={})
 ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ɴᴇxᴛ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴠᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ᴀɴᴅ ɴᴏ ʟᴀɢ ɪssᴜᴇ ᴡɪᴛʜ ʙᴇsᴛ sᴏᴜɴᴅ ǫᴜᴀʟɪᴛʏ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs
 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ
 ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/Mr_DiSasTer_XD)...
 ━━━━━━━━━━━━━━━━━━━**"""
 
+SUDO_CMD = """
+
+"""
+
+USERS_CMD = """
+
+"""
+
+
+
 
 @Client.on_callback_query(filters.regex("home"))
 async def home(_, query: CallbackQuery):
-    await query.edit_message_text(f"{HELP_TEXT}".format(query.message.chat.first_name, query.message.chat.id),
+    await query.edit_message_text(f"{HOME_TEXT}".format(query.message.chat.first_name, query.message.chat.id),
     reply_markup=InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-            InlineKeyboardButton("🍄 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TechQuardSupport"),
-            InlineKeyboardButton("📣 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
+            InlineKeyboardButton("🛟 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TheSupportBots"),
+            InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
         ],
         [
             InlineKeyboardButton("🧰 ᴄᴏᴍᴍᴀɴᴅs", url="https://telegra.ph/%F0%9D%99%B2%E1%B4%8F%E1%B4%8D%E1%B4%8D%E1%B4%80%C9%B4%E1%B4%85s-04-06"),
-            InlineKeyboardButton("⚕️ ᴍᴏʀᴇ ɪɴғᴏ", callback_data="moreinfo")
+            InlineKeyboardButton("🎃 ᴍᴏʀᴇ ɪɴғᴏ", callback_data="moreinfo")
         ]
    
      ]
@@ -36,7 +46,7 @@ async def home(_, query: CallbackQuery):
 
 
 
-@Client.on_callback_query(filters.regex("moreinfo"))
+@Client.on_callback_query(filters.regex("help_cmd"))
 async def others(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ʜᴇʏᴀ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})
@@ -46,15 +56,15 @@ async def others(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "🗯️ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TechQuardSupport"),
+                        "🌾 sᴜᴅᴏ ᴄᴍᴅ ", callback_data="sudo_users"),
                     InlineKeyboardButton(
-                        "🌐 ᴜᴘᴅᴀᴛᴇꜱ", url=f"https://t.me/TechQuard")
+                        "🍃 ᴜsᴇʀs ᴄᴍᴅ", callback_data="user_cmd"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🍄 ᴍᴀɪɴᴛᴀɪɴᴇʀ", url="https://t.me/Mr_Disaster_Xd"),
+                        "🎓 ᴍᴀɪɴᴛᴀɪɴᴇʀ", url="https://t.me/Mr_Disaster_Xd"),
                     InlineKeyboardButton(
-                        "🍀 ᴏᴛʜᴇʀ ɪɴғᴏ", callback_data="repoinfo")
+                        "🍀 ᴍᴏʀᴇ ɪɴғᴏ", callback_data="moreinfo")
                 ],
                 [
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
@@ -65,16 +75,8 @@ async def others(_, query: CallbackQuery):
 
 
 
-@Client.on_callback_query(filters.regex("cls"))
-async def reinfo(_, query: CallbackQuery):
-    try:
-        await query.message.delete()
-        await query.message.reply_to_message.delete()
-    except Exception:
-        pass
 
-
-@Client.on_callback_query(filters.regex("repoinfo"))
+@Client.on_callback_query(filters.regex("moreinfo"))
 async def repoinfo(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 
@@ -94,10 +96,10 @@ async def repoinfo(_, query: CallbackQuery):
                     InlineKeyboardButton(
                         "👾 ʙᴏᴛ ʟɪsᴛs", url="https://t.me/TechQuardBot"),
                     InlineKeyboardButton(
-                        "🤤 ᴘᴏʀɴ ʜᴜʙ", url="http://t.me/TheNudesHubBot")
+                        "🎓 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Mr_DiSasTer_XD")
                 ],
                 [
-                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="moreinfo")
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
                 ]
            ]
         ),
