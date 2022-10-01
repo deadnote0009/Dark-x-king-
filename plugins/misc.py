@@ -8,7 +8,7 @@ from pyrogram import Client, filters
 from modules.helpers.filters import command, other_filters
 from pyrogram.errors import UserAlreadyParticipant
 from modules.helpers.decorators import authorized_users_only
-from modules.clientbot import client as user
+from modules.clientbot.clientbot import client as user
 from modules.config import BOT_USERNAME, SESSION_NAME
 from modules.helpers.get_file_id import get_file_id
 from youtube_search import YoutubeSearch
