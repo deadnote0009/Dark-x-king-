@@ -458,6 +458,4 @@ async def admincache(client, message: Message):
                               caption="**✅ ʙᴏᴛ ʀᴇʟᴏᴀᴅᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ !\n✅ ᴀᴅᴍɪɴ ʟɪsᴛ ʜᴀs ᴜᴘᴅᴀᴛᴇᴅ !**"
     )
 
-@Client.on_callback_query(filters.regex("close_play"))
-async def in_close_play(_, query: CallbackQuery):
-    await query.message.delete()
+
