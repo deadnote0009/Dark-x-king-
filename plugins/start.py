@@ -12,20 +12,21 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 DARK_IMG = (
-"https://te.legra.ph/file/fa6c391baeca4594e7ca5.jpg",
-"https://te.legra.ph/file/b3079e6041c32f91aa8cc.jpg",
-"https://te.legra.ph/file/87a36639d2dac42da7ec2.jpg",
-"https://te.legra.ph/file/640f00d7f0fea2640dcee.jpg",
-"https://te.legra.ph/file/af4e385ad2d039fc7fb55.jpg",
-"https://te.legra.ph/file/d48e10f96c47b9234447d.jpg",
-"https://te.legra.ph/file/91163718437d62b6a9b05.jpg",
-"https://te.legra.ph/file/617d689c8a1e4d7f03512.jpg",
-"https://te.legra.ph/file/dacd6bed230ebe1802eb2.jpg",
-"https://te.legra.ph/file/e1ea346c66e98ee8e773c.jpg",
-"https://te.legra.ph/file/4cce92e16ea6dc3b68989.jpg",
-"https://te.legra.ph/file/bf62629bfa33eed1fe39d.jpg",
-"https://te.legra.ph/file/1f36469d073c63fe6603c.jpg",
-"https://te.legra.ph/file/e1fe736cb651f507c8b38.jpg",
+"https://te.legra.ph/file/24e09283605dd7e6160a1.jpg",
+"https://te.legra.ph/file/2ea6a63d1738eec406e23.jpg",
+"https://te.legra.ph/file/c6dc0b91fd56d5c99871b.jpg",
+"https://te.legra.ph/file/fe68bd3a59c3ea6cbaac0.jpg",
+"https://te.legra.ph/file/3f507b64e8a75b11f93b7.jpg",
+"https://te.legra.ph/file/894061404d8e5d83a303c.jpg",
+"https://te.legra.ph/file/17490b7b7600f2ac232b4.jpg",
+"https://te.legra.ph/file/b23c22fea8b1718280856.jpg",
+"https://te.legra.ph/file/61cad7f5ac55d77a951df.jpg",
+"https://te.legra.ph/file/138690876272a96585f49.jpg",
+"https://te.legra.ph/file/c73b942a4bc30aa56e729.jpg",
+"https://te.legra.ph/file/21eb5abf4888394019c9c.jpg"
+"https://te.legra.ph/file/e7d5d55910092de2b56df.jpg",
+"https://te.legra.ph/file/95e864dfe3a410ccf20fa.jpg",
+
 )
 
 
