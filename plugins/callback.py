@@ -1,6 +1,10 @@
-from pyrogram import Client, filters
+import asyncio
+from pyrogram import filters
+from pyrogram.types import Message
+from pyrogram import Client
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from modules.config import BOT_USERNAME
+from pyrogram.errors import MessageNotModified
 
 HOME_TEXT = """
 ʜᴇʟʟᴏ [{}](tg://user?id={})
