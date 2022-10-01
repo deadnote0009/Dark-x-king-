@@ -32,7 +32,7 @@ async def join_chat(c: Client, m: Message):
             (await user.get_me()).id,
             can_manage_voice_chats=True
         )
-        return await user.send_message(chat_id, "ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ ʙᴀʙʏ.​")
+        return await user.send_message(chat_id, "» ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ.​")
     except UserAlreadyParticipant:
         admin = await m.chat.get_member((await user.get_me()).id)
         if not admin.can_manage_voice_chats:
@@ -40,8 +40,8 @@ async def join_chat(c: Client, m: Message):
                 (await user.get_me()).id,
                 can_manage_voice_chats=True
             )
-            return await user.send_message(chat_id, "ᴀssɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ ʙᴀʙʏ.​")
-        return await user.send_message(chat_id, "ᴀssɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ ʙᴀʙʏ.​")
+            return await user.send_message(chat_id, "» ᴀssɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ.​")
+        return await user.send_message(chat_id, "» ᴀssɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ.​")
 
 
 
@@ -82,7 +82,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
-@Client.on_message(filters.command(["song", "music", " vsong", "video"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["song", "music", " vsong"]) & ~filters.private & ~filters.channel)
 def song(client, message):
 
     message.delete()
@@ -117,13 +117,13 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit(f"» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴏɴɢ ꜰʀᴏᴍ youtube server.")
+    m.edit(f"» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴏɴɢ ꜰʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ sᴇʀᴠᴇʀ.")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**• ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ​ » [darkxmusic](t.me/{BOT_USERNAME}) 💕\n• ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ » {chutiya}\n• sᴇᴀʀᴄʜᴇᴅ ғᴏʀ » {query}**"
+        rep = f"**• ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ​ » [ᴅᴀʀᴋxᴍᴜsɪᴄ](t.me/{BOT_USERNAME}) 🍄\n• ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ » {chutiya}\n• sᴇᴀʀᴄʜᴇᴅ ғᴏʀ » {query}**"
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -131,7 +131,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit("**» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴇʀʀᴏʀ, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ​ » [Tech quard](t.me/TechQuard}) 💕**")
+        m.edit("**» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴇʀʀᴏʀ, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ​ » [ᴛᴇᴄʜ ǫᴜᴀʀᴅ](t.me/TechQuard})**")
         print(e)
 
     try:
