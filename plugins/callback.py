@@ -170,7 +170,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except MessageNotModified:
             pass
  
-    elif query.data=="close_Play":
+    elif query.data=="close_play":
         try:
             await query.message.delete()
             await query.message.reply_to_message.delete()
