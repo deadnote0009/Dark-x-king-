@@ -71,12 +71,12 @@ async def start_(client: Client, message: Message):
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-            InlineKeyboardButton("👥 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TechQuardSupport"),
-            InlineKeyboardButton("📣 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
+            InlineKeyboardButton("🛟 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TheSupportBots"),
+            InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
         ],
         [
             InlineKeyboardButton("🧰 ᴄᴏᴍᴍᴀɴᴅs", url="https://telegra.ph/%F0%9D%99%B2%E1%B4%8F%E1%B4%8D%E1%B4%8D%E1%B4%80%C9%B4%E1%B4%85s-04-06"),
-            InlineKeyboardButton("⚕️ ᴍᴏʀᴇ ɪɴғᴏ", callback_data="moreinfo")
+            InlineKeyboardButton("🎃 ᴍᴏʀᴇ ɪɴғᴏ", callback_data="moreinfo")
         ]
    
      ]
@@ -92,8 +92,8 @@ async def start(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
              [
             [
-                InlineKeyboardButton(text="👥 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TechQuardSupport"),
-                InlineKeyboardButton(text="📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/TechQuard"),
+                InlineKeyboardButton(text="🛟 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheSupportBots"),
+                InlineKeyboardButton(text="🎃 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/TechQuard"),
             ]
         ]
      ),
@@ -107,5 +107,18 @@ async def ping_pong(client: Client, message: Message):
         caption=" ᴩɪɴɢɪɴɢ...",
     delta_ping = time() - start
     await sumit.edit_text(
-    f"ᴘ ᴏ ɴ ɢ ! \n" f"`{delta_ping * 1000:.3f} ᴍs`")
+    f"𝗣 𝗢 𝗡 𝗚 🎉 !! \n" f"`{delta_ping * 1000:.3f} ᴍs`",
+    reply_markup=InlineKeyboardMarkup(
+             [
+            [
+                InlineKeyboardButton(text="🛟 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheSupportBots"),
+                InlineKeyboardButton(text="🎃 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/TechQuard"),
+            ],
+            [
+                InlineKeyboardButton(text="🔐 ʏᴏᴜᴛᴜʙᴇ", url=f"https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"),
+                InlineKeyboardButton(text="🎓 ᴅᴇᴠᴇᴏᴘᴇʀ", url=f"https://t.me/Mr_DiSasTer_XD"),
+            ]
+        ]
+     ),
+  ) 
 
