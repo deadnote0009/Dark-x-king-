@@ -20,14 +20,16 @@ SUDO_CMD = """
 """
 
 
-PIRO_LOG = """
-KYA HI BTAAU BHAIYO 
+AALU_LOG = """
+ KYA HI BTAAU BHAIYO 
 
+
+ AAJ KL LOGO KO MAI JADA CHUBNE LGA HU 
 """
 
 
 
-USERS_CMD = """
+PIRO_LOG = """
 
 🌾 **ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴍᴜsɪᴄ ʙᴏᴛ :**
 ๏ /play : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.
@@ -146,7 +148,7 @@ async def sudo(_, query: CallbackQuery):
 
  @Client.on_callback_query(filters.regex("users_cmd"))
 async def users(_, query: CallbackQuery):
-    await query.edit_message_text(f"{USERS_CMD}".format(query.message.chat.first_name, query.message.chat.id),
+    await query.edit_message_text(f"{PIRO_L}".format(query.message.chat.first_name, query.message.chat.id),
     reply_markup=InlineKeyboardMarkup(
             [              
                 [
