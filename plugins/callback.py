@@ -25,7 +25,7 @@ SUDO_CMD = """
 
 PIRO_LOG = """
 
-🌾 **ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴍᴜsɪᴄ ʙᴏᴛ :**
+**ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴍᴜsɪᴄ ʙᴏᴛ :**
 ๏ /play : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.
 ๏ /pause : ᴩᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
 ๏ /resume : ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴩᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ.
@@ -40,11 +40,18 @@ PIRO_LOG = """
 """
 
 
-@Client.on_callback_query(filters.regex("home"))
-async def home(_, query: CallbackQuery):
-    await query.edit_message_text(f"{HOME_TEXT}".format(query.message.chat.first_name, query.message.chat.id),
-    reply_markup=InlineKeyboardMarkup(
-    [
+MORE_TEXT = """
+ʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 
+ᴀɴᴅ ʙᴏᴛ ʟɪsᴛs ᴀɴᴅ ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ.
+ᴛʜɪs ʀᴇᴘᴏ ɪs ᴏɴʟʏ ᴍᴀᴅᴇ ғᴏʀ ᴅᴇᴘʟᴏʏɪɴɢ ᴀ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ʙᴏᴛ ᴏɴ ʜᴇʀᴏᴋᴜ ᴡɪᴛʜᴏᴜᴛ ғᴀᴄɪɴɢ ʜᴇʀᴏᴋᴜ ᴀᴄᴄᴏᴜɴᴛ ʙᴀɴɴɪɴɢ ᴘʀᴏʙᴇʟᴍ.
+
+"""
+
+
+@Client.on_callback_query()
+async def cb_handler(client: Client, query: CallbackQuery):
+    if query.data=="home":
+        buttons = [
         [
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
@@ -58,22 +65,20 @@ async def home(_, query: CallbackQuery):
         ]
    
      ]
-  ),
-)
+        reply_markup = InlineKeyboardMarkup(buttons)
+        try:
+            await query.edit_message_text(
+                HOME_TEXT,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
 
 
-
-
-
-
-@Client.on_callback_query(filters.regex("help_cmd"))
-async def others(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""ʜᴇʏᴀ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})
-
-ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ :""",
-    reply_markup=InlineKeyboardMarkup(
-            [
+    elif query.data=="help_cmd":
+        get_me = await client.get_me()
+        USERNAME = get_me.username
+        buttons = [
                 [
                     InlineKeyboardButton(
                         "🌾 sᴜᴅᴏ ᴄᴍᴅ ", callback_data="sudo_users"),
@@ -90,22 +95,19 @@ async def others(_, query: CallbackQuery):
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
                 ]
            ]
-        ),
-    )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        try:
+            await query.edit_message_text(
+                HOME_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
 
 
 
-
-@Client.on_callback_query(filters.regex("more_info"))
-async def repoinfo(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""ʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 
-ᴀɴᴅ ʙᴏᴛ ʟɪsᴛs ᴀɴᴅ ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ.
-ᴛʜɪs ʀᴇᴘᴏ ɪs ᴏɴʟʏ ᴍᴀᴅᴇ ғᴏʀ ᴅᴇᴘʟᴏʏɪɴɢ ᴀ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ʙᴏᴛ ᴏɴ ʜᴇʀᴏᴋᴜ ᴡɪᴛʜᴏᴜᴛ ғᴀᴄɪɴɢ ʜᴇʀᴏᴋᴜ ᴀᴄᴄᴏᴜɴᴛ ʙᴀɴɴɪɴɢ ᴘʀᴏʙᴇʟᴍ.
-
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
+    elif query.data=="more_info":
+        buttons =  [
                 [
                     InlineKeyboardButton(
                         "🔗 ɢɪᴛʜᴜʙ", url=f"https://github.com/Sumit9969/DarkxMusic"),
@@ -122,34 +124,47 @@ async def repoinfo(_, query: CallbackQuery):
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
                 ]
            ]
-        ),
-     )
-    
-#@Client.on_callback_query(filters.regex("sudo_users"))
-#async def sudo(_, query: CallbackQuery):
-#    await query.edit_message_text(f"{SUDO_CMD}".format(query.message.chat.first_name, query.message.chat.id),
-#    reply_markup=InlineKeyboardMarkup(
-#            [              
-#                [
-#                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_cmd")
-#                ]
-#           ]
-#        ),
-#     )
-#
+        reply_markup = InlineKeyboardMarkup(buttons)
+        try:
+            await query.edit_message_text(
+                MORE_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass  
 
 
-# @Client.on_callback_query(filters.regex("users_cmd"))
-#async def users(_, query: CallbackQuery):
-#    await query.edit_message_text(f"{PIRO_LOG}".format(query.message.chat.first_name, query.message.chat.id),
-#    reply_markup=InlineKeyboardMarkup(
-#            [              
-#                [
-#                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_cmd")
-#                ]
-#           ]
-#        ),
-#     ) 
+
+    elif query.data=="users_cmd":
+        buttons =  [              
+                [
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_cmd")
+                ]
+           ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        try:
+            await query.edit_message_text(
+                USERS_CMD.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
 
 
-       
+    elif query.data=="sudo_users":
+        buttons =  [              
+                [
+                    InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="help_cmd")
+                ]
+           ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        try:
+            await query.edit_message_text(
+                SUDO_CMD.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass 
+ 
+   
+ 
