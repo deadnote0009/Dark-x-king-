@@ -103,7 +103,7 @@ async def start(client: Client, message: Message):
 async def ping_pong(client: Client, message: Message):
     start = time()
     sumit = await message.reply_photo(
-        random.choice(DARK_IMG)",
+        random.choice(DARK_IMG),
         caption="ᴩɪɴɢɪɴɢ...",
     )
     await sumit.edit_text(
