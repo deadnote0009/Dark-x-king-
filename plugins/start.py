@@ -78,9 +78,10 @@ async def start(client: Client, message: Message):
 @Client.on_message(command(["ping"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("ᴘɪɴɢ..... 👀")
+    sumit = await message.reply_photo(
+    photo=f"DARK_IMG",
+        caption=" ᴩɪɴɢɪɴɢ...",
     delta_ping = time() - start
-    await message.reply_photo(
-        photo=f"https://te.legra.ph/file/2256701b54c183ab45e11.jpg",
-        caption=f"ᴘ ᴏ ɴ ɢ ! \n" f"`{delta_ping * 1000:.3f} ᴍs`")
+    await sumit.edit_text(
+    f"ᴘ ᴏ ɴ ɢ ! \n" f"`{delta_ping * 1000:.3f} ᴍs`")
 
