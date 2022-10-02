@@ -91,7 +91,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎓 ᴍᴀɪɴᴛᴀɪɴᴇʀ", url="https://t.me/Mr_Disaster_Xd"),
+                        "🎓 ᴍᴀɪɴᴛᴀɪɴᴇʀ", url="https://t.me/itzyournil"),
                     InlineKeyboardButton(
                         "🍀 ᴍᴏʀᴇ ɪɴғᴏ", callback_data="more_info")
                 ],
@@ -116,7 +116,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton(
                         "🔗 ɢɪᴛʜᴜʙ", url=f"https://github.com/zz818529/DarkxMusic"),
                     InlineKeyboardButton(
-                        "💌 ʏᴏᴜᴛᴜʙᴇ", url=f"https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw")
+                        "💌 ʏᴏᴜᴛᴜʙᴇ", url=f"https://www.youtube.com/channel/UCJsr2_2XLrto3E-F5ONTbsw")
                 ],
                 [
                     InlineKeyboardButton(
