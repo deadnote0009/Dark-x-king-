@@ -188,12 +188,12 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**ᴘʟᴇᴀsᴇ ᴍᴀɴᴜᴀʟʟʏ ᴀᴅᴅ ᴀssɪsᴛᴀɴᴛ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/Mr_DiSasTer_XD)** ")
+                        f"**ᴘʟᴇᴀsᴇ ᴍᴀɴᴜᴀʟʟʏ ᴀᴅᴅ ᴀssɪsᴛᴀɴᴛ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/itzyournil)** ")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**ᴘʟᴇᴀsᴇ ᴍᴀɴᴜᴀʟʟʏ ᴀᴅᴅ ᴀssɪsᴛᴀɴᴛ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/Mr_DiSasTer_XD)*")
+            f"**ᴘʟᴇᴀsᴇ ᴍᴀɴᴜᴀʟʟʏ ᴀᴅᴅ ᴀssɪsᴛᴀɴᴛ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/itzyournil)*")
         return
     
     audio = (
@@ -219,8 +219,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
              [
             [
-                InlineKeyboardButton(text="● sᴜᴘᴘᴏʀᴛ ●", url=f"https://t.me/TechQuardSupport"),
-                InlineKeyboardButton(text="● ᴜᴘᴅᴀᴛᴇs ●", url=f"https://t.me/TechQuard"),
+                InlineKeyboardButton(text="● sᴜᴘᴘᴏʀᴛ ●", url=f"https://t.me/itzyournil"),
+                InlineKeyboardButton(text="● ᴜᴘᴅᴀᴛᴇs ●", url=f"https://t.me/itzyournil"),
             ],
             [   InlineKeyboardButton(text="● ᴄʟᴏsᴇ ●", callback_data="close_play")
             ]
@@ -274,8 +274,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
              [
             [
-                InlineKeyboardButton(text="● sᴜᴘᴘᴏʀᴛ ●", url=f"https://t.me/TechQuardSupport"),
-                InlineKeyboardButton(text="● ᴜᴘᴅᴀᴛᴇs ●", url=f"https://t.me/TechQuard"),
+                InlineKeyboardButton(text="● sᴜᴘᴘᴏʀᴛ ●", url=f"https://t.me/itzyournil"),
+                InlineKeyboardButton(text="● ᴜᴘᴅᴀᴛᴇs ●", url=f"https://t.me/itzyournil"),
             ],
             [   InlineKeyboardButton(text="● ᴄʟᴏsᴇ ●", callback_data="close_play")
             ]
@@ -330,8 +330,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
              [
             [
-                InlineKeyboardButton(text="● sᴜᴘᴘᴏʀᴛ ●", url=f"https://t.me/TechQuardSupport"),
-                InlineKeyboardButton(text="● ᴜᴘᴅᴀᴛᴇs ●", url=f"https://t.me/TechQuard"),
+                InlineKeyboardButton(text="● sᴜᴘᴘᴏʀᴛ ●", url=f"https://t.me/itzyournil"),
+                InlineKeyboardButton(text="● ᴜᴘᴅᴀᴛᴇs ●", url=f"https://t.me/itzyournil"),
             ],
             [   InlineKeyboardButton(text="● ᴄʟᴏsᴇ ●", callback_data="close_play")
             ]
