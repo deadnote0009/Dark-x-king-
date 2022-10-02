@@ -10,7 +10,7 @@ HOME_TEXT = """
 ʜᴇʟʟᴏ [{}](tg://user?id={})
 ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ɴᴇxᴛ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴠᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ᴀɴᴅ ɴᴏ ʟᴀɢ ɪssᴜᴇ ᴡɪᴛʜ ʙᴇsᴛ sᴏᴜɴᴅ ǫᴜᴀʟɪᴛʏ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs
 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ
-ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/Mr_DiSasTer_XD)...
+ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ [𝔻𝕒𝕣𝕜 ℕ𝕚𝕝](https://t.me/itzyournil)...
 ━━━━━━━━━━━━━━━━━━━**"""
 
 SUDO_CMD = """
@@ -60,8 +60,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-            InlineKeyboardButton("🛟 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TheSupportBots"),
-            InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
+            InlineKeyboardButton("🛟 sᴜᴘᴘᴏʀᴛ", url="https://t.me/itzyournil"),
+            InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/itzyournil")
         ],
         [
             InlineKeyboardButton("🧰 ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_cmd"),
@@ -114,15 +114,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons =  [
                 [
                     InlineKeyboardButton(
-                        "🔗 ɢɪᴛʜᴜʙ", url=f"https://github.com/Sumit9969/DarkxMusic"),
+                        "🔗 ɢɪᴛʜᴜʙ", url=f"https://github.com/zz818529/DarkxMusic"),
                     InlineKeyboardButton(
                         "💌 ʏᴏᴜᴛᴜʙᴇ", url=f"https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw")
                 ],
                 [
                     InlineKeyboardButton(
-                        "👾 ʙᴏᴛ ʟɪsᴛs", url="https://t.me/TechQuardBot"),
+                        "👾 ʙᴏᴛ ʟɪsᴛs", url="https://t.me/TechQuardBots"),
                     InlineKeyboardButton(
-                        "🎓 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Mr_DiSasTer_XD")
+                        "🎓 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/itzyournil")
                 ],
                 [
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
