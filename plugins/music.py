@@ -353,7 +353,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption=f"**» ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ {position} **\n──────────────────\n​🍄 **ɴᴀᴍᴇ :**[{title[:65]}]({url})\n──────────────────\n⏰ ** ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` **ᴍɪɴᴜᴛᴇs**\n👀 ** ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ : **{bsdk}",
+            caption=f"**➻ ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ϙᴜᴇᴜᴇ » {position} **\n\n​🍄 **ɴᴀᴍᴇ :**[{title[:65]}]({url})\n⏰ ** ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` **ᴍɪɴᴜᴛᴇs**\n👀 ** ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ : **{bsdk}",
             reply_markup=keyboard,
         )
     else:
@@ -370,7 +370,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"**──────────────────\n🍄 ɴᴀᴍᴇ :**[{title[:65]}]({url})\n──────────────────\n⏰ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}` ᴍɪɴᴜᴛᴇs\n👀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​:** {bsdk}\n",
+            caption=f"**➻ ꜱᴛᴀʀᴛᴇᴅ ꜱᴛʀᴇᴀᴍɪɴɢ\n\n🍄 ɴᴀᴍᴇ :**[{title[:65]}]({url})\n──────────────────\n⏰ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}` ᴍɪɴᴜᴛᴇs\n👀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​:** {bsdk}\n",
            )
 
     os.remove("final.png")
@@ -458,6 +458,4 @@ async def admincache(client, message: Message):
                               caption="**✅ ʙᴏᴛ ʀᴇʟᴏᴀᴅᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ !\n✅ ᴀᴅᴍɪɴ ʟɪsᴛ ʜᴀs ᴜᴘᴅᴀᴛᴇᴅ !**"
     )
 
-@Client.on_callback_query(filters.regex("close_play"))
-async def in_close_play(_, query: CallbackQuery):
-    await query.message.delete()
+
