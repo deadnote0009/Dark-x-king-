@@ -63,7 +63,7 @@ async def start_(client: Client, message: Message):
 ʜᴇʟʟᴏ, ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ᴀɴᴅ ɴᴇxᴛ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴠᴄ ᴘʟᴀʏᴇʀ
 ʙᴏᴛ ᴀɴᴅ ɴᴏ ʟᴀɢ ɪssᴜᴇ ᴡɪᴛʜ ʙᴇsᴛ sᴏᴜɴᴅ ǫᴜᴀʟɪᴛʏ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs
 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ
-ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ [sᴜᴍɪᴛ ʏᴀᴅᴀᴠ](https://t.me/Mr_DiSasTer_XD)...
+ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ [🇧🇩 𝔻𝕒𝕣𝕜 ℕ𝕚𝕝 ](https://t.me/itzyournil)...
 ━━━━━━━━━━━━━━━━━━━**""",
     reply_markup=InlineKeyboardMarkup(
     [
@@ -71,8 +71,8 @@ async def start_(client: Client, message: Message):
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-            InlineKeyboardButton("🛟 sᴜᴘᴘᴏʀᴛ", url="https://t.me/TheSupportBots"),
-            InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/TechQuard")
+            InlineKeyboardButton("🛟 sᴜᴘᴘᴏʀᴛ", url="https://t.me/itzyournil"),
+            InlineKeyboardButton("🌾 ᴜᴘᴅᴀᴛᴇs", url="https://t.me/itzyournil")
         ],
         [
             InlineKeyboardButton("🧰 ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_cmd"),
@@ -92,8 +92,8 @@ async def start(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
              [
             [
-                InlineKeyboardButton(text="🛟 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheSupportBots"),
-                InlineKeyboardButton(text="🎃 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/TechQuard"),
+                InlineKeyboardButton(text="🛟 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheSupportBotstt"),
+                InlineKeyboardButton(text="🎃 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/TechQuad"),
             ]
         ]
      ),
@@ -115,8 +115,8 @@ async def ping_pong(client: Client, message: Message):
                 InlineKeyboardButton(text="🎃 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/TechQuard"),
             ],
             [
-                InlineKeyboardButton(text="🔐 ʏᴏᴜᴛᴜʙᴇ", url=f"https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw"),
-                InlineKeyboardButton(text="🎓 ᴅᴇᴠᴇᴏᴘᴇʀ", url=f"https://t.me/Mr_DiSasTer_XD"),
+                InlineKeyboardButton(text="🔐 ʏᴏᴜᴛᴜʙᴇ", url=f"https://www.youtube.com/channel/UCJsr2_2XLrto3E-F5ONTbsw"),
+                InlineKeyboardButton(text="🎓 ᴅᴇᴠᴇᴏᴘᴇʀ", url=f"https://t.me/itzyournil"),
             ]
         ]
      ),
