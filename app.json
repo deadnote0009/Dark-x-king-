@@ -3,7 +3,7 @@
     "logo": "https://te.legra.ph/file/086426b04c04a3c16f558.jpg",
     "description": "ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴜsɪᴄ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ sᴜᴍɪᴛ ʏᴀᴅᴀᴠ.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/zz818529/DarkxMusic",
+    "repository": "https://github.com/nahid-nil/Dark-x-king-",
     "stack": "container",
     "env": {
         "API_ID": {
