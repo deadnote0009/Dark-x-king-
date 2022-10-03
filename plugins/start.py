@@ -112,7 +112,7 @@ async def ping_pong(client: Client, message: Message):
              [
             [
                 InlineKeyboardButton(text="🛟 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TheSupportBots"),
-                InlineKeyboardButton(text="🎃 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/TechQuard"),
+                InlineKeyboardButton(text="🎃 ★彡[ʙᴏᴛ ᴏᴡɴᴇʀ]彡★", url=f"https://t.me/itzyournil"),
             ],
             [
                 InlineKeyboardButton(text="🔐 ʏᴏᴜᴛᴜʙᴇ", url=f"https://www.youtube.com/channel/UCJsr2_2XLrto3E-F5ONTbsw"),
